@@ -5,7 +5,7 @@ import { ApolloClient } from "apollo-client";
 import { createHttpLink } from "apollo-link-http";
 import { InMemoryCache } from "apollo-cache-inmemory";
 
-const uri = "https://miniquizapplication.herokuapp.com//graphql";
+const uri = "https://miniquizapplication.herokuapp.com/graphql";
 
 const httpLink = createHttpLink({
   uri,
