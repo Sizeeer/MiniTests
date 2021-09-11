@@ -1,0 +1,14 @@
+mutation updateTest($updateTestInput: UpdateTestInput!, $title: String!) {
+  updateTest(updateTestInput: $updateTestInput, title: $title) {
+    id
+    title
+    owner
+    description
+    questions {
+      title
+      answers
+      weight
+    }
+    allLikes
+  }
+}

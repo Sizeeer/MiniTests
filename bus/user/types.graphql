@@ -1,0 +1,26 @@
+type User {
+  id: ID!
+  firstName: String!
+  lastName: String!
+  email: String!
+  password: String!
+}
+
+input UserInput {
+  firstName: String
+  lastName: String
+  email: String
+  password: String
+}
+
+input LoginInput {
+  email: String!
+  password: String!
+}
+
+input SignUpInput {
+  firstName: String!
+  lastName: String!
+  password: String!
+  email: String!
+}

@@ -1,0 +1,16 @@
+subscription {
+  testUpdated {
+    id
+    title
+    owner
+    description
+    questions {
+      title
+      answers
+      weight
+    }
+    rate
+    userId
+    allRates
+  }
+}

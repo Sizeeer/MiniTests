@@ -1,0 +1,22 @@
+mutation createTest($createTestInput: CreateTestInput!) {
+  createTest(createTestInput: $createTestInput) {
+    id
+    title
+    owner
+    description
+    questions {
+      title
+      answers {
+        title
+        weight
+      }
+    }
+    allLikes
+    userId
+    result {
+      title
+      from
+      to
+    }
+  }
+}

@@ -1,0 +1,5 @@
+mutation like($title: String!) {
+  likeTest(title: $title) {
+    allLikes
+  }
+}

@@ -1,0 +1,26 @@
+#import "../bus/user/types.graphql"
+#import "../bus/test/types.graphql"
+
+type Query {
+  getProfileInfo: User!
+  isAuth: Boolean!
+  getTests(currentPage: Int, limits: Int!): ReturnedTests
+  getMyTests(currentPage: Int, limits: Int!): ReturnedTests
+  getTestByTitle(title: String!): Test
+  getMyTestByTitle(title: String!): Test
+}
+
+type Mutation {
+  changeProfile(userInput: UserInput!): User!
+  login(loginInput: LoginInput!): User!
+  logout: User!
+  signUp(signUpInput: SignUpInput!): User!
+  createTest(createTestInput: CreateTestInput!): Test!
+  updateTest(updateTestInput: UpdateTestInput!, title: String!): Test!
+  likeTest(title: String!): likeReturned!
+  deleteTest(title: String!): Test!
+}
+
+type Subscription {
+  testUpdated: Test
+}

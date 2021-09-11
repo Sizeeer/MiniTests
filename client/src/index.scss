@@ -1,0 +1,237 @@
+@import "./reset";
+@import "./variables";
+@import "./fonts";
+
+body {
+  font-family: "Roboto" !important;
+  font-weight: 900 !important;
+  background-color: #fff;
+}
+
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:visited {
+  background-color: #734ce9 !important;
+  border-color: #6442ca !important;
+}
+
+.form-control:focus {
+  border-color: #734ce9 !important;
+}
+
+.page-link {
+  color: #734ce9 !important;
+}
+
+.page-item.disabled .page-link {
+  color: #6c757d !important;
+}
+
+.page-item.active .page-link {
+  z-index: 3 !important;
+  color: #fff !important;
+  background-color: #734ce9 !important;
+  border-color: #734ce9 !important;
+}
+
+.page-link:focus {
+  box-shadow: none !important;
+}
+
+.likeBtn {
+  background-color: #fff !important;
+  border-color: #734ce9 !important;
+  color: #734ce9 !important;
+  padding: 0.3rem 0.6rem;
+}
+
+.likeBtn:hover {
+  background-color: #fff !important;
+}
+
+.link-primary {
+  color: #734ce9 !important;
+}
+
+.link-primary:hover {
+  color: #6442ca !important;
+}
+
+.form_radio_btn {
+  flex: 1 0 50%;
+  margin-right: 5px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  cursor: pointer;
+  color: #000;
+}
+.form_radio_btn input[type="radio"] {
+  display: none;
+}
+.form_radio_btn label {
+  display: block;
+  cursor: pointer;
+  padding: 5px 15px;
+  line-height: 34px;
+  border: 3px solid #734ce9;
+  border-radius: 6px;
+  user-select: none;
+}
+
+/* Checked */
+.form_radio_btn input[type="radio"]:checked + label {
+  color: #ffd540 !important;
+}
+
+/* Hover */
+.form_radio_btn label:hover {
+  color: #ffd540 !important;
+}
+
+.cardName {
+  margin-right: 49px !important;
+}
+
+.cardName:last-child {
+  margin-right: 0;
+}
+
+.link-primary.disabled {
+  color: #6c757d !important;
+}
+
+.spinner-border.text-primary {
+  color: #734ce9 !important;
+}
+
+.notification-container {
+  font-size: 14px;
+  box-sizing: border-box;
+  position: fixed;
+}
+
+.notification-container {
+  font-size: 14px;
+  box-sizing: border-box;
+  position: fixed;
+  z-index: 999999;
+}
+
+.top-right {
+  top: 12px;
+  right: 12px;
+  transition: transform 0.6s ease-in-out;
+  animation: toast-in-right 0.7s;
+}
+
+.bottom-right {
+  bottom: 12px;
+  right: 12px;
+  transition: transform 0.6s ease-in-out;
+  animation: toast-in-right 0.7s;
+}
+
+.top-left {
+  top: 12px;
+  left: 12px;
+  transition: transform 0.6s ease-in;
+  animation: toast-in-left 0.7s;
+}
+
+.bottom-left {
+  bottom: 12px;
+  left: 12px;
+  transition: transform 0.6s ease-in;
+  animation: toast-in-left 0.7s;
+}
+
+.notification {
+  background: #fff;
+  transition: 0.3s ease;
+  position: relative;
+  pointer-events: auto;
+  overflow: hidden;
+  margin: 0 0 6px;
+  padding: 30px;
+  margin-bottom: 15px;
+  width: 300px;
+  max-height: 100px;
+  border-radius: 3px 3px 3px 3px;
+  box-shadow: 0 0 10px #999;
+  color: #000;
+  opacity: 0.9;
+  background-position: 15px;
+  background-repeat: no-repeat;
+}
+
+.notification:hover {
+  box-shadow: 0 0 12px #fff;
+  opacity: 1;
+  cursor: pointer;
+}
+
+.notification-title {
+  font-weight: 700;
+  font-size: 16px;
+  text-align: left;
+  margin-top: 0;
+  margin-bottom: 6px;
+  width: 300px;
+  height: 18px;
+}
+
+.notification-message {
+  margin: 0;
+  text-align: left;
+  height: 18px;
+  margin-left: -1px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.toast {
+  height: auto !important;
+  width: 365px;
+  color: #fff;
+  padding: 8px 15px 10px 10px;
+  opacity: 1 !important;
+}
+
+.notification-container button {
+  position: relative;
+  right: -0.3em;
+  top: 0;
+  float: right;
+  font-weight: 700;
+  color: #fff;
+  outline: none;
+  border: none;
+  text-shadow: 0 1px 0 #fff;
+  opacity: 0.8;
+  line-height: 1;
+  font-size: 16px;
+  padding: 0;
+  cursor: pointer;
+  background: 0 0;
+  border: 0;
+}
+
+@keyframes toast-in-right {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes toast-in-left {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}

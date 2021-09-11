@@ -1,0 +1,8 @@
+query {
+  getProfileInfo {
+    id
+    firstName
+    email
+    lastName
+  }
+}

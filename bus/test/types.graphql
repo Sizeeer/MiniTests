@@ -1,0 +1,68 @@
+type AnswerType {
+  title: String!
+  weight: Int!
+}
+
+input AnswerInput {
+  title: String!
+  weight: Int!
+}
+
+type ResultType {
+  title: String!
+  from: Int!
+  to: Int!
+}
+
+input ResultInput {
+  title: String!
+  from: Int!
+  to: Int!
+}
+
+input QuestionInput {
+  title: String!
+  answers: [AnswerInput]!
+}
+
+type QuestionType {
+  title: String!
+  answers: [AnswerType]!
+}
+
+type likeReturned {
+  allLikes: Int!
+}
+
+type ReturnedTests {
+  tests: [Test!]
+  currentPage: Int
+  totalTests: Int!
+}
+
+input CreateTestInput {
+  title: String!
+  description: String!
+  questions: [QuestionInput]!
+  result: [ResultInput]
+}
+
+input UpdateTestInput {
+  title: String
+  description: String
+  questions: QuestionInput
+}
+
+scalar Date
+
+type Test {
+  id: ID!
+  title: String!
+  owner: String!
+  description: String!
+  questions: [QuestionType]!
+  userId: [String]
+  allLikes: Int!
+  result: [ResultType]!
+  dateOfCreating: Date!
+}

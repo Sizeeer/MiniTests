@@ -1,0 +1,27 @@
+query getTests($currentPage: Int, $limits: Int!) {
+  getTests(currentPage: $currentPage, limits: $limits) {
+    tests {
+      id
+      title
+      owner
+      description
+      questions {
+        title
+        answers {
+          title
+          weight
+        }
+      }
+      allLikes
+      userId
+      result {
+        title
+        from
+        to
+      }
+      dateOfCreating
+    }
+    currentPage
+    totalTests
+  }
+}
