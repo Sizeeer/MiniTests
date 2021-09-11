@@ -11,16 +11,23 @@
     "clean": "rm -rf ./node_modules/.cache/babel-loader",
     "client": "npm run start --prefix client",
     "client:install": "npm install --prefix client",
-    "dev": "cross-env NODE_ENV=development concurrently \"npm run start\" \"npm run client\"",
-    "heroku-postbuild": "cd client && npm install && npm install --only=dev --no-shrinkwrap && npm run build"
+    "dev": "cross-env NODE_ENV=development concurrently \"npm run start\" \"npm run client\""
+    
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@babel/core": "^7.15.5",
+    "@babel/plugin-transform-runtime": "^7.15.0",
+    "@babel/preset-env": "^7.15.6",
+    "@babel/runtime": "^7.15.4",
     "apollo-link-error": "^1.1.13",
     "apollo-server": "^2.23.0",
     "apollo-server-express": "^2.23.0",
+    "babel-cli": "^6.26.0",
+    "babel-plugin-import-graphql": "^2.8.1",
+    "babel-watch": "^7.5.0",
     "bcrypt": "^5.0.1",
     "concurrently": "^6.0.2",
     "cors": "^2.8.5",
