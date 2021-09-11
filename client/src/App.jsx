@@ -37,7 +37,7 @@ export const App = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3000/isAuth")
+      .get("https://miniquizapplication.herokuapp.com/isAuth")
       .then((res) => res.data)
       .then((data) => {
         setIsAuth(!!data.token);
